@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide paragraph between 768px and 840px, show above 840px */
+@media (min-width: 768px) {
+  .hide-between-md-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 840px) {
+  .hide-between-md-desktop {
+    display: block;
+  }
+}
+
+/* Force mobile view on tablets in portrait mode, desktop view only in landscape */
+@media (min-width: 768px) and (orientation: portrait) {
+  .desktop-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  
+  .desktop-layout > * {
+    position: relative !important;
+    width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  
+  /* Override Tailwind md: classes on image container for portrait */
+  .desktop-layout > div:nth-child(2) {
+    position: relative !important;
+    width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0 !important;
+    z-index: auto !important;
+  }
+  
+  .hero-section {
+    overflow: hidden !important;
+  }
+  
+  /* Override image container positioning in portrait */
+  .image-container {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0 !important;
+    z-index: auto !important;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .desktop-layout {
+    display: block !important;
+    height: calc(100vh - 80px) !important;
+  }
+  
+  .hero-section {
+    overflow: visible !important;
+  }
+}
+
+/* Progressive image sizing at larger breakpoints */
+@media (min-width: 1050px) {
+  .progressive-image-size {
+    height: 550px !important;
+    max-width: 650px !important;
+  }
+}
+
+@media (min-width: 1150px) {
+  .progressive-image-size {
+    height: 620px !important;
+    max-width: 720px !important;
+  }
+}
