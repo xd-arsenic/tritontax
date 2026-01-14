@@ -34,7 +34,7 @@ export default function MarketingSignUp() {
               <div>
                 <div className="text-xl font-extrabold tracking-tight text-[#39281D]">Triton Tax</div>
                 <div className="text-xs font-medium text-[#0F1108] opacity-70">
-                  An IRS VITA Program
+                  A free tax preparation program
                 </div>
               </div>
             </div>

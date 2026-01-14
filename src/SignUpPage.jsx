@@ -32,7 +32,7 @@ export default function SignUpPage() {
               <div>
                 <div className="text-xl font-extrabold tracking-tight text-[#39281D]">Triton Tax</div>
                 <div className="text-xs font-medium text-[#0F1108] opacity-70">
-                  An IRS VITA Program
+                  A free tax preparation program
                 </div>
               </div>
             </div>
@@ -509,7 +509,7 @@ export default function SignUpPage() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm" style={{ color: '#FBF9F3', opacity: 0.7 }}>
               <span>© {new Date().getFullYear()} Triton Tax. All rights reserved.</span>
               <div className="flex flex-wrap justify-center gap-4 text-xs">
-                <span>An IRS VITA Program</span>
+                <span>A free tax preparation program</span>
                 <span>•</span>
                 <span>UC San Diego</span>
               </div>
