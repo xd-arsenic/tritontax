@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
-export default function SignUpPage() {
+export default function ContactUsPage() {
+  const [searchParams] = useSearchParams();
+  const submitted = searchParams.get('submitted') === 'true';
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
   useEffect(() => {
@@ -41,118 +43,199 @@ export default function SignUpPage() {
             <Link to="/" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Home</Link>
             <Link to="/faq" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">FAQ</Link>
             <Link to="/volunteer-resources" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Volunteer Resources</Link>
-            <Link to="/contact" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Contact Us</Link>
-            <Link to="/signup" className="rounded-full bg-[#3C431E] px-3.5 py-2 text-white hover:bg-[#2d3416] whitespace-nowrap">Sign Up</Link>
+            <Link to="/contact" className="rounded-full bg-[#3C431E] px-3.5 py-2 text-white hover:bg-[#2d3416] whitespace-nowrap">Contact Us</Link>
+            <Link to="/signup" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Sign Up</Link>
           </nav>
         </div>
       </header>
 
-      {/* SIGNUP SECTION */}
-      <section className="mx-auto max-w-6xl px-6 pt-6 pb-12 md:pt-8 md:pb-16">
-        <div className="text-center mb-6 md:mb-8">
-          <h1 className="text-4xl font-semibold tracking-tight text-[#39281D] mb-3 sm:text-5xl" style={{ lineHeight: '1.2' }}>
-            Sign Up to Volunteer
+      {/* CONTACT SECTION */}
+      <section className="mx-auto max-w-6xl px-6 pt-12 pb-20">
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-semibold tracking-tight text-[#39281D] mb-4 sm:text-5xl" style={{ lineHeight: '1.2' }}>
+            Contact Us
           </h1>
-          <p className="hidden md:block text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
-            Join our team and make a real impact
+          <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+            Get in touch with the Triton Tax team
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Primary: Tax Preparer Option */}
-          <div className="mb-2 rounded-2xl p-4 md:p-6 relative transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
-            <div className="text-center mb-2 md:mb-4">
-              <div className="w-10 h-10 md:w-14 md:h-14 mx-auto mb-1.5 md:mb-3 rounded-full bg-[#1E4262] flex items-center justify-center" style={{ boxShadow: '0 3px 10px rgba(30, 66, 98, 0.35)' }}>
-                <svg className="w-5 h-5 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#39281D] mb-1 md:mb-2" style={{ lineHeight: '1.4' }}>Tax Preparer</h2>
-              <p className="text-xs md:text-base text-[#39281D] opacity-75 max-w-2xl mx-auto" style={{ lineHeight: '1.5' }}>
-                Our most needed role. Gain hands-on experience with tax preparation and financial skills.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-3 md:mb-4">
-              <div>
-                <h3 className="text-base md:text-lg font-semibold text-[#39281D] mb-2 md:mb-2.5 text-left md:text-center" style={{ lineHeight: '1.4' }}>What you'll do</h3>
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#39281D] opacity-75 md:mx-auto md:max-w-fit" style={{ lineHeight: '1.6' }}>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Prepare tax returns for community members</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Work directly with clients</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Receive on-site support and supervision</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-base md:text-lg font-semibold text-[#39281D] mb-2 md:mb-2.5 text-left md:text-center" style={{ lineHeight: '1.4' }}>What you'll get</h3>
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#39281D] opacity-75 md:mx-auto md:max-w-fit" style={{ lineHeight: '1.6' }}>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>IRS Basic or Advanced certification</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Hands-on tax preparation training</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Resume-ready experience</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        {submitted && (
+          <div className="mb-8 max-w-2xl mx-auto p-6 rounded-lg border" style={{ backgroundColor: '#FBF9F3', borderColor: 'rgba(57, 40, 29, 0.2)' }}>
+            <p className="text-[#39281D] font-medium text-center">
+              Thank you for your message! We'll get back to you soon.
+            </p>
+          </div>
+        )}
 
-            <div className="text-center">
-              <Link
-                to="/tax-preparer-signup"
-                className="inline-block rounded-full bg-[#5A3E30] px-6 py-2.5 md:px-7 md:py-3 text-sm md:text-base font-semibold text-white text-center transition-colors"
+        <div className="grid gap-16 md:grid-cols-2 max-w-5xl mx-auto">
+          {/* Contact Form */}
+          <div>
+            <h2 className="text-2xl font-semibold text-[#39281D] mb-6" style={{ lineHeight: '1.4' }}>Send us a message</h2>
+            <form 
+              action="https://formsubmit.co/support@tritontax.org" 
+              method="POST"
+              className="space-y-4"
+            >
+              {/* Hidden inputs for FormSubmit customization */}
+              <input type="hidden" name="_subject" value="New Contact Form Submission - Triton Tax" />
+              <input type="hidden" name="_next" value={`${window.location.origin}/contact?submitted=true`} />
+              <input type="hidden" name="_captcha" value="false" />
+              
+              {/* Name field */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-[#39281D] mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] transition-all"
+                  style={{ 
+                    backgroundColor: '#FBF9F3',
+                    border: '1px solid rgba(57, 40, 29, 0.15)',
+                    boxShadow: '0 1px 2px rgba(57, 40, 29, 0.05)'
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 2px 4px rgba(57, 40, 29, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.15)';
+                    e.currentTarget.style.boxShadow = '0 1px 2px rgba(57, 40, 29, 0.05)';
+                  }}
+                  placeholder="Your name"
+                />
+              </div>
+
+              {/* Email field */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-[#39281D] mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] transition-all"
+                  style={{ 
+                    backgroundColor: '#FBF9F3',
+                    border: '1px solid rgba(57, 40, 29, 0.15)',
+                    boxShadow: '0 1px 2px rgba(57, 40, 29, 0.05)'
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 2px 4px rgba(57, 40, 29, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.15)';
+                    e.currentTarget.style.boxShadow = '0 1px 2px rgba(57, 40, 29, 0.05)';
+                  }}
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              {/* Message field */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-[#39281D] mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={6}
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] resize-vertical transition-all"
+                  style={{ 
+                    backgroundColor: '#FBF9F3',
+                    border: '1px solid rgba(57, 40, 29, 0.15)',
+                    boxShadow: '0 1px 2px rgba(57, 40, 29, 0.05)'
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 2px 4px rgba(57, 40, 29, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.15)';
+                    e.currentTarget.style.boxShadow = '0 1px 2px rgba(57, 40, 29, 0.05)';
+                  }}
+                  placeholder="Your message..."
+                ></textarea>
+              </div>
+
+              {/* Submit button */}
+              <button
+                type="submit"
+                className="w-full rounded-full bg-[#5A3E30] px-5 py-3 text-sm font-semibold text-white transition-colors"
                 style={{ boxShadow: '0 3px 12px rgba(90, 62, 48, 0.25), 0 1px 4px rgba(57, 40, 29, 0.2)' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#39281D'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5A3E30'}
               >
-                Become a Tax Preparer
-              </Link>
-            </div>
+                Send Message
+              </button>
+            </form>
           </div>
 
-          {/* Secondary: Other Roles */}
-          <div className="mb-8 pt-8">
-            <div className="text-center mb-6">
-              <p className="text-base text-[#39281D] opacity-60" style={{ lineHeight: '1.6' }}>
-                Other opportunities available
+          {/* Contact Information */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Email</h2>
+              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
+                For general inquiries, volunteer questions, or program information:
               </p>
+              <a 
+                href="mailto:support@tritontax.org" 
+                className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
+              >
+                support@tritontax.org
+              </a>
             </div>
-            
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-[#E0B84F] flex items-center justify-center">
-                  <svg className="w-7 h-7 text-[#39281D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-              </div>
-              <div className="flex-grow text-center md:text-left">
-                <h3 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Office of Marketing</h3>
-                <p className="text-base text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
-                  We're also recruiting graphic designers, social media managers, and content creators to promote our program and engage with our community.
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <Link
-                  to="/marketing-signup"
-                  className="inline-block rounded-full border border-[#39281D] border-opacity-30 px-6 py-2.5 text-sm font-semibold text-[#39281D] text-center transition-colors hover:bg-[rgba(160,130,90,0.12)]"
-                >
-                  Learn More
-                </Link>
-              </div>
+
+            <div>
+              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Phone</h2>
+              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
+                Call or text us:
+              </p>
+              <a 
+                href="tel:7472145063" 
+                className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
+              >
+                (747) 214-5063
+              </a>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Schedule a Meeting</h2>
+              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
+                Book a 30-minute appointment to discuss volunteering opportunities or ask questions.
+              </p>
+              <a
+                href="https://calendly.com/dnegreteg0001/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-[#E0B84F] px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors"
+                style={{ boxShadow: '0 3px 12px rgba(224, 184, 79, 0.35), 0 1px 4px rgba(224, 184, 79, 0.25)' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#D4A843'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E0B84F'}
+              >
+                Book an Appointment
+              </a>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Have Questions?</h2>
+              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
+                Check out our <Link to="/faq" className="underline text-[#39281D] hover:opacity-70 transition-opacity font-semibold">Frequently Asked Questions</Link> page for answers to common questions about volunteering, training, and the program.
+              </p>
+              <Link
+                to="/faq"
+                className="inline-block rounded-full border border-[#39281D] border-opacity-30 px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors hover:bg-[rgba(160,130,90,0.12)]"
+              >
+                Visit FAQ Page
+              </Link>
             </div>
           </div>
         </div>

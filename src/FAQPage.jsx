@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function SignUpPage() {
+export default function FAQPage() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
   useEffect(() => {
@@ -39,121 +39,127 @@ export default function SignUpPage() {
 
           <nav className="hidden items-center gap-1.5 rounded-full bg-transparent border border-[rgba(160,130,90,0.6)] p-2 text-sm font-semibold text-[#39281D] md:flex">
             <Link to="/" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Home</Link>
-            <Link to="/faq" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">FAQ</Link>
+            <Link to="/faq" className="rounded-full bg-[#3C431E] px-3.5 py-2 text-white hover:bg-[#2d3416] whitespace-nowrap">FAQ</Link>
             <Link to="/volunteer-resources" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Volunteer Resources</Link>
             <Link to="/contact" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Contact Us</Link>
-            <Link to="/signup" className="rounded-full bg-[#3C431E] px-3.5 py-2 text-white hover:bg-[#2d3416] whitespace-nowrap">Sign Up</Link>
+            <Link to="/signup" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Sign Up</Link>
           </nav>
         </div>
       </header>
 
-      {/* SIGNUP SECTION */}
-      <section className="mx-auto max-w-6xl px-6 pt-6 pb-12 md:pt-8 md:pb-16">
-        <div className="text-center mb-6 md:mb-8">
-          <h1 className="text-4xl font-semibold tracking-tight text-[#39281D] mb-3 sm:text-5xl" style={{ lineHeight: '1.2' }}>
-            Sign Up to Volunteer
+      {/* FAQ SECTION */}
+      <section className="mx-auto max-w-6xl px-6 pt-12 pb-20">
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-semibold tracking-tight text-[#39281D] mb-4 sm:text-5xl" style={{ lineHeight: '1.2' }}>
+            Frequently Asked Questions
           </h1>
-          <p className="hidden md:block text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
-            Join our team and make a real impact
+          <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+            Find answers to common questions about volunteering with Triton Tax
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Primary: Tax Preparer Option */}
-          <div className="mb-2 rounded-2xl p-4 md:p-6 relative transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
-            <div className="text-center mb-2 md:mb-4">
-              <div className="w-10 h-10 md:w-14 md:h-14 mx-auto mb-1.5 md:mb-3 rounded-full bg-[#1E4262] flex items-center justify-center" style={{ boxShadow: '0 3px 10px rgba(30, 66, 98, 0.35)' }}>
-                <svg className="w-5 h-5 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#39281D] mb-1 md:mb-2" style={{ lineHeight: '1.4' }}>Tax Preparer</h2>
-              <p className="text-xs md:text-base text-[#39281D] opacity-75 max-w-2xl mx-auto" style={{ lineHeight: '1.5' }}>
-                Our most needed role. Gain hands-on experience with tax preparation and financial skills.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-3 md:mb-4">
-              <div>
-                <h3 className="text-base md:text-lg font-semibold text-[#39281D] mb-2 md:mb-2.5 text-left md:text-center" style={{ lineHeight: '1.4' }}>What you'll do</h3>
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#39281D] opacity-75 md:mx-auto md:max-w-fit" style={{ lineHeight: '1.6' }}>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Prepare tax returns for community members</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Work directly with clients</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Receive on-site support and supervision</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-base md:text-lg font-semibold text-[#39281D] mb-2 md:mb-2.5 text-left md:text-center" style={{ lineHeight: '1.4' }}>What you'll get</h3>
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-[#39281D] opacity-75 md:mx-auto md:max-w-fit" style={{ lineHeight: '1.6' }}>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>IRS Basic or Advanced certification</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Hands-on tax preparation training</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#1E4262] mr-2.5 font-bold">•</span>
-                    <span>Resume-ready experience</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <Link
-                to="/tax-preparer-signup"
-                className="inline-block rounded-full bg-[#5A3E30] px-6 py-2.5 md:px-7 md:py-3 text-sm md:text-base font-semibold text-white text-center transition-colors"
-                style={{ boxShadow: '0 3px 12px rgba(90, 62, 48, 0.25), 0 1px 4px rgba(57, 40, 29, 0.2)' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#39281D'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5A3E30'}
-              >
-                Become a Tax Preparer
-              </Link>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              Who can volunteer with Triton Tax?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Any UC San Diego student is welcome to apply. No prior tax or finance experience is required.
+            </p>
           </div>
 
-          {/* Secondary: Other Roles */}
-          <div className="mb-8 pt-8">
-            <div className="text-center mb-6">
-              <p className="text-base text-[#39281D] opacity-60" style={{ lineHeight: '1.6' }}>
-                Other opportunities available
-              </p>
-            </div>
-            
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-[#E0B84F] flex items-center justify-center">
-                  <svg className="w-7 h-7 text-[#39281D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-              </div>
-              <div className="flex-grow text-center md:text-left">
-                <h3 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Office of Marketing</h3>
-                <p className="text-base text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
-                  We're also recruiting graphic designers, social media managers, and content creators to promote our program and engage with our community.
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <Link
-                  to="/marketing-signup"
-                  className="inline-block rounded-full border border-[#39281D] border-opacity-30 px-6 py-2.5 text-sm font-semibold text-[#39281D] text-center transition-colors hover:bg-[rgba(160,130,90,0.12)]"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              Do I need tax experience to volunteer?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              No. All volunteers receive training, and IRS certification is provided before participating in tax clinics.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              What training is required?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              All volunteers must complete at least the IRS <strong>Basic</strong> certification. The <strong>Advanced</strong> certification is encouraged for those with additional availability or interest.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              How long does the training take?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Training typically takes <strong>7–20 hours</strong>, depending on the certification level selected and prior experience.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              When do tax clinics take place?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Tax clinics typically begin in early February and run throughout the tax season. We will aim to hold around <strong>75% of our clinics on campus</strong>.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              Who does Triton Tax serve?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Triton Tax primarily serves UC San Diego students and staff, including campus employees across all roles. We also provide services to members of the surrounding community.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              Is transportation provided for off-campus clinics?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Yes. Free transportation is provided for events held off-campus. If you have your own car, you can also recieve a gas voucher but we ask that you carpool with other volunteers if possible.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              What support is available during clinics?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Experienced volunteers and coordinators are present at all clinics to provide guidance and answer questions. We also have access to IRS resources and support materials to help with complex tax situations.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200 md:col-span-2" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              What roles are available?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Within the Office of operations, we offer the role of <strong>tax preparer</strong>. This is our most needed role and is prefect for students who are interested in gaining hands-on experience with tax preparation and financial skills and are looking to build their resume. 
+              <br></br><br></br>
+              For those interested in more senior roles within the Office of Operations, we are also recruting <strong>senior tax preparers</strong> who must complete advanced training and certification. 
+              <br></br><br></br>
+              Additionally, the Office of Marketing is looking for <strong>graphic designers, social media managers, and content creators</strong> who are interested in promoting our program and engaging with our community.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              How much time does volunteering require?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              Time commitments vary by role, but most volunteers participate during scheduled clinics and periodic meetings throughout the tax season.
+            </p>
+          </div>
+
+          <div className="rounded-2xl p-8 transition-all duration-200" style={{ backgroundColor: '#FBF9F3', boxShadow: '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 10px 35px rgba(57, 40, 29, 0.22), 0 4px 12px rgba(57, 40, 29, 0.16), 0 2px 4px rgba(57, 40, 29, 0.12)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 6px 24px rgba(57, 40, 29, 0.18), 0 2px 8px rgba(57, 40, 29, 0.12), 0 1px 2px rgba(57, 40, 29, 0.08)'}>
+            <h2 className="text-xl font-semibold text-[#39281D] mb-3" style={{ lineHeight: '1.4' }}>
+              How do I sign up?
+            </h2>
+            <p className="text-base leading-relaxed text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+              You can apply through our <Link to="/signup" className="underline text-[#39281D] hover:opacity-70 transition-opacity font-semibold">volunteer registration form</Link>. Once your application is reviewed, you'll receive role-specific next steps by email.
+            </p>
           </div>
         </div>
       </section>
