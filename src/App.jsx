@@ -10,7 +10,7 @@ import ScheduleRedirect from "./ScheduleRedirect";
 
 export default function App() {
   return (
-    <Router basename="/tritontax">
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/volunteer-resources" element={<VolunteerResources />} />
