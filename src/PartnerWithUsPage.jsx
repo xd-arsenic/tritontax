@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 
-export default function ContactUsPage() {
+export default function PartnerWithUsPage() {
   const [searchParams] = useSearchParams();
   const submitted = searchParams.get('submitted') === 'true';
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
@@ -42,10 +42,10 @@ export default function ContactUsPage() {
 
           <nav className="hidden items-center gap-1.5 rounded-full bg-transparent border border-[rgba(160,130,90,0.6)] p-2 text-sm font-semibold text-[#39281D] md:flex">
             <Link to="/" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Home</Link>
-            <Link to="/partner-with-us" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Partner with Us</Link>
+            <Link to="/partner-with-us" className="rounded-full bg-[#3C431E] px-3.5 py-2 text-white hover:bg-[#2d3416] whitespace-nowrap">Partner with Us</Link>
             <Link to="/faq" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">FAQ</Link>
             <Link to="/volunteer-resources" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Volunteer Resources</Link>
-            <Link to="/contact" className="rounded-full bg-[#3C431E] px-3.5 py-2 text-white hover:bg-[#2d3416] whitespace-nowrap">Contact Us</Link>
+            <Link to="/contact" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Contact Us</Link>
             <Link to="/signup" className="rounded-full px-3.5 py-2 hover:bg-[rgba(160,130,90,0.12)] whitespace-nowrap">Sign Up</Link>
           </nav>
 
@@ -81,7 +81,7 @@ export default function ContactUsPage() {
               <Link
                 to="/partner-with-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-lg px-4 py-3 text-sm font-semibold text-[#39281D] hover:bg-[rgba(160,130,90,0.12)] transition-colors"
+                className="rounded-lg px-4 py-3 text-sm font-semibold text-white bg-[#3C431E] hover:bg-[#2d3416] transition-colors"
               >
                 Partner with Us
               </Link>
@@ -102,7 +102,7 @@ export default function ContactUsPage() {
               <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-lg px-4 py-3 text-sm font-semibold text-white bg-[#3C431E] hover:bg-[#2d3416] transition-colors"
+                className="rounded-lg px-4 py-3 text-sm font-semibold text-[#39281D] hover:bg-[rgba(160,130,90,0.12)] transition-colors"
               >
                 Contact Us
               </Link>
@@ -118,42 +118,201 @@ export default function ContactUsPage() {
         )}
       </header>
 
-      {/* CONTACT SECTION */}
+      {/* MAIN CONTENT */}
       <section className="mx-auto max-w-6xl px-6 pt-12 pb-20">
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-semibold tracking-tight text-[#39281D] mb-4 sm:text-5xl" style={{ lineHeight: '1.2' }}>
-            Contact Us
+        {/* Hero Section */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-semibold tracking-tight text-[#39281D] mb-4 sm:text-5xl text-center" style={{ lineHeight: '1.2' }}>
+            Partner With Triton Tax
           </h1>
+          <p className="text-xl text-[#39281D] opacity-75 text-center" style={{ lineHeight: '1.6' }}>
+            Supporting free, reliable tax assistance through community collaboration
+          </p>
+        </div>
+
+        {/* Who We Are */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+            Who We Are
+          </h2>
+          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+            Triton Tax is an IRS-certified Volunteer Income Tax Assistance (VITA) program based at UC San Diego. We provide free, reliable tax assistance to students and members of the surrounding community while training student volunteers through hands-on, IRS-certified experience.
+          </p>
           <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
-            Get in touch with the Triton Tax team
+            We are affiliated with the MAAC Project, a non-profit organization that has provided free tax assistance to communities across San Diego County through its VITA program for over 20 years. Through this affiliation, Triton Tax operates in coordination with established VITA best practices and compliance standards.
+          </p>
+        </div>
+
+        {/* Why Partner With Us */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+            Why Partner With Us
+          </h2>
+          <p className="text-lg text-[#39281D] opacity-75 mb-8" style={{ lineHeight: '1.6' }}>
+            Partnerships play a critical role in expanding access to free tax assistance and financial support services. Organizations partner with Triton Tax to:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(60, 67, 30, 0.1)', border: '1px solid rgba(60, 67, 30, 0.2)' }}>
+              <p className="text-base text-[#39281D] font-medium" style={{ lineHeight: '1.6' }}>
+                Expand access to IRS-certified, no-cost tax preparation
+              </p>
+            </div>
+            <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(224, 184, 79, 0.15)', border: '1px solid rgba(224, 184, 79, 0.3)' }}>
+              <p className="text-base text-[#39281D] font-medium" style={{ lineHeight: '1.6' }}>
+                Support financial stability and tax compliance in the community
+              </p>
+            </div>
+            <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(90, 62, 48, 0.1)', border: '1px solid rgba(90, 62, 48, 0.2)' }}>
+              <p className="text-base text-[#39281D] font-medium" style={{ lineHeight: '1.6' }}>
+                Engage students in meaningful, service-driven learning
+              </p>
+            </div>
+            <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(160, 130, 90, 0.1)', border: '1px solid rgba(160, 130, 90, 0.2)' }}>
+              <p className="text-base text-[#39281D] font-medium" style={{ lineHeight: '1.6' }}>
+                Collaborate with an established VITA program operating under federal guidelines
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Types of Partnerships We Welcome */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+            Types of Partnerships We Welcome
+          </h2>
+          <p className="text-lg text-[#39281D] opacity-75 mb-6" style={{ lineHeight: '1.6' }}>
+            We work with organizations and institutions interested in expanding access to free tax assistance and supporting individuals and families during tax season. Partnerships vary based on community needs, but commonly include the following:
+          </p>
+          
+          <div className="space-y-6 text-left">
+            <div>
+              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+                Community Organizations
+              </h3>
+              <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+                Nonprofits and service providers that support students, families, or community members who may benefit from free, IRS-certified tax assistance.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+                Schools and Educational Institutions
+              </h3>
+              <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+                Elementary schools, middle and high schools, school districts, and educational programs interested in sharing tax assistance information with families, guardians, or staff.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+                Campus Units
+              </h3>
+              <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+                UC San Diego departments, centers, and programs that work directly with students and are interested in connecting them to on-campus tax support.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+                Housing Providers and Housing Organizations
+              </h3>
+              <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+                Organizations supporting residents or tenants who may benefit from free tax assistance, including affordable housing providers and housing-related service groups.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+                Workforce Development and Job Training Programs
+              </h3>
+              <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+                Programs supporting individuals entering or re-entering the workforce who may benefit from free, IRS-certified tax assistance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* What Partnership Can Look Like */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+            What Partnership Can Look Like
+          </h2>
+          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+            Partnerships are flexible and shaped around shared goals and community needs. Common forms of collaboration include:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6', paddingLeft: '1.5rem' }}>
+            <li>Referring clients, students, or community members to Triton Tax clinics</li>
+            <li>Hosting or co-hosting on-site tax assistance or outreach events, when space and scheduling allow</li>
+            <li>Coordinating informational or educational sessions during tax season</li>
+            <li>Sharing tax assistance information or materials with your community</li>
+            <li>Supporting access needs such as transportation or space coordination</li>
+            <li>Collaborating on community-focused service initiatives</li>
+          </ul>
+          <p className="text-lg text-[#39281D] opacity-75 font-medium" style={{ lineHeight: '1.6' }}>
+            All services provided through Triton Tax are offered free of charge.
+          </p>
+        </div>
+
+        {/* Our Standards & Compliance */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+            Our Standards & Compliance
+          </h2>
+          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+            Triton Tax operates under established IRS VITA guidelines and quality standards.
+          </p>
+          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+            Although federal law does not require tax preparers, including paid preparers, to hold formal degrees or licensure, all Triton Tax volunteers complete IRS training and certification, with returns reviewed by senior volunteers who have completed advanced tax law training.
+          </p>
+          <p className="text-lg text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.6' }}>
+            Additional standards include:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6', paddingLeft: '1.5rem' }}>
+            <li>Annual IRS certification for all volunteers</li>
+            <li>Strict confidentiality and data protection requirements</li>
+            <li>No-cost services for all clients</li>
+            <li>Coordination with established VITA partners, including the MAAC Project</li>
+          </ul>
+        </div>
+
+        {/* Interested in Partnering With Us? */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-6 text-center" style={{ lineHeight: '1.4' }}>
+            Interested in Partnering With Us?
+          </h2>
+          <p className="text-lg text-[#39281D] opacity-75 mb-8" style={{ lineHeight: '1.6' }}>
+            We welcome conversations with organizations interested in supporting access to free tax assistance.
+          </p>
+          <p className="text-lg text-[#39281D] opacity-75 mb-8" style={{ lineHeight: '1.6' }}>
+            If you'd like to learn more or explore a potential partnership, please reach out to our team.
           </p>
         </div>
 
         {submitted && (
           <div className="mb-8 max-w-2xl mx-auto p-6 rounded-lg border" style={{ backgroundColor: 'rgba(255, 248, 220, 0.9)', borderColor: 'rgba(57, 40, 29, 0.2)' }}>
-            <p className="text-[#39281D] font-medium text-center">
+            <p className="text-lg text-[#39281D] font-medium text-center">
               Thank you for your message! We'll get back to you soon.
             </p>
           </div>
         )}
 
-        <div className="grid gap-16 md:grid-cols-2 max-w-5xl mx-auto">
-          {/* Contact Form */}
-          <div>
-            <h2 className="text-2xl font-semibold text-[#39281D] mb-6" style={{ lineHeight: '1.4' }}>Send us a message</h2>
+        <div className="max-w-5xl mx-auto md:ml-[10%]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Contact Form */}
+            <div>
             <form 
               action="https://formsubmit.co/support@tritontax.org" 
               method="POST"
               className="space-y-4"
             >
               {/* Hidden inputs for FormSubmit customization */}
-              <input type="hidden" name="_subject" value="New Contact Form Submission - Triton Tax" />
-              <input type="hidden" name="_next" value={`${window.location.origin}/contact?submitted=true`} />
+              <input type="hidden" name="_subject" value="New Partnership Inquiry - Triton Tax" />
+              <input type="hidden" name="_next" value={`${window.location.origin}/partner-with-us?submitted=true`} />
               <input type="hidden" name="_captcha" value="false" />
               
               {/* Name field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[#39281D] mb-2">
+                <label htmlFor="name" className="block text-base font-medium text-[#39281D] mb-2">
                   Name
                 </label>
                 <input
@@ -161,7 +320,7 @@ export default function ContactUsPage() {
                   name="name"
                   id="name"
                   required
-                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] transition-all"
+                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-lg text-[#39281D] transition-all"
                   style={{ 
                     backgroundColor: '#FBF9F3',
                     border: '1px solid rgba(57, 40, 29, 0.15)',
@@ -181,7 +340,7 @@ export default function ContactUsPage() {
 
               {/* Email field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#39281D] mb-2">
+                <label htmlFor="email" className="block text-base font-medium text-[#39281D] mb-2">
                   Email
                 </label>
                 <input
@@ -189,7 +348,7 @@ export default function ContactUsPage() {
                   name="email"
                   id="email"
                   required
-                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] transition-all"
+                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-lg text-[#39281D] transition-all"
                   style={{ 
                     backgroundColor: '#FBF9F3',
                     border: '1px solid rgba(57, 40, 29, 0.15)',
@@ -207,9 +366,37 @@ export default function ContactUsPage() {
                 />
               </div>
 
+              {/* Organization field */}
+              <div>
+                <label htmlFor="organization" className="block text-base font-medium text-[#39281D] mb-2">
+                  Organization
+                </label>
+                <input
+                  type="text"
+                  name="organization"
+                  id="organization"
+                  required
+                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-lg text-[#39281D] transition-all"
+                  style={{ 
+                    backgroundColor: '#FBF9F3',
+                    border: '1px solid rgba(57, 40, 29, 0.15)',
+                    boxShadow: '0 1px 2px rgba(57, 40, 29, 0.05)'
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 2px 4px rgba(57, 40, 29, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.15)';
+                    e.currentTarget.style.boxShadow = '0 1px 2px rgba(57, 40, 29, 0.05)';
+                  }}
+                  placeholder="Your organization"
+                />
+              </div>
+
               {/* Message field */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#39281D] mb-2">
+                <label htmlFor="message" className="block text-base font-medium text-[#39281D] mb-2">
                   Message
                 </label>
                 <textarea
@@ -217,7 +404,7 @@ export default function ContactUsPage() {
                   id="message"
                   rows={6}
                   required
-                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] resize-vertical transition-all"
+                  className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-lg text-[#39281D] resize-vertical transition-all"
                   style={{ 
                     backgroundColor: '#FBF9F3',
                     border: '1px solid rgba(57, 40, 29, 0.15)',
@@ -238,7 +425,7 @@ export default function ContactUsPage() {
               {/* Submit button */}
               <button
                 type="submit"
-                className="w-full rounded-full bg-[#5A3E30] px-5 py-3 text-sm font-semibold text-white transition-colors"
+                className="w-full rounded-full bg-[#5A3E30] px-5 py-3 text-base font-semibold text-white transition-colors"
                 style={{ boxShadow: '0 3px 12px rgba(90, 62, 48, 0.25), 0 1px 4px rgba(57, 40, 29, 0.2)' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#39281D'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5A3E30'}
@@ -246,65 +433,55 @@ export default function ContactUsPage() {
                 Send Message
               </button>
             </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="space-y-6">
-            <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Email</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
-                For general inquiries, volunteer questions, or program information:
-              </p>
-              <a 
-                href="mailto:support@tritontax.org" 
-                className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
-              >
-                support@tritontax.org
-              </a>
             </div>
 
-            <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Phone</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
-                Call or text us:
-              </p>
-              <a 
-                href="tel:7472145063" 
-                className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
-              >
-                (747) 214-5063
-              </a>
-            </div>
+            {/* Contact Information */}
+            <div className="space-y-6 md:pt-16">
+              <p className="text-base font-medium text-[#39281D] mb-4">Or contact us by:</p>
+              <div>
+                <h2 className="text-xl font-semibold text-[#0E1E2C] mb-2" style={{ lineHeight: '1.4' }}>Email</h2>
+                <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
+                  For partnership inquiries:
+                </p>
+                <a 
+                  href="mailto:support@tritontax.org" 
+                  className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
+                >
+                  support@tritontax.org
+                </a>
+              </div>
 
-            <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Schedule a Meeting</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
-                Book a 30-minute appointment to discuss volunteering opportunities or ask questions.
-              </p>
-              <a
-                href="https://calendly.com/dnegreteg0001/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-full bg-[#E0B84F] px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors"
-                style={{ boxShadow: '0 3px 12px rgba(224, 184, 79, 0.35), 0 1px 4px rgba(224, 184, 79, 0.25)' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#D4A843'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E0B84F'}
-              >
-                Book an Appointment
-              </a>
-            </div>
+              <div>
+                <h2 className="text-xl font-semibold text-[#0E1E2C] mb-2" style={{ lineHeight: '1.4' }}>Phone</h2>
+                <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
+                  Call or text us:
+                </p>
+                <a 
+                  href="tel:7472145063" 
+                  className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
+                >
+                  (747) 214-5063
+                </a>
+              </div>
 
-            <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Have Questions?</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
-                Check out our <Link to="/faq" className="underline text-[#39281D] hover:opacity-70 transition-opacity font-semibold">Frequently Asked Questions</Link> page for answers to common questions about volunteering, training, and the program.
-              </p>
-              <Link
-                to="/faq"
-                className="inline-block rounded-full border border-[#39281D] border-opacity-30 px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors hover:bg-[rgba(160,130,90,0.12)]"
-              >
-                Visit FAQ Page
-              </Link>
+              <div>
+                <h2 className="text-xl font-semibold text-[#0E1E2C] mb-2" style={{ lineHeight: '1.4' }}>Schedule a Meeting</h2>
+                <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
+                  Book a 30-minute appointment<br />
+                  to discuss partnership opportunities.
+                </p>
+                <a
+                  href="https://calendly.com/dnegreteg0001/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-full bg-[#E0B84F] px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors"
+                  style={{ boxShadow: '0 3px 12px rgba(224, 184, 79, 0.35), 0 1px 4px rgba(224, 184, 79, 0.25)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#D4A843'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E0B84F'}
+                >
+                  Book an Appointment
+                </a>
+              </div>
             </div>
           </div>
         </div>

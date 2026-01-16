@@ -9,6 +9,7 @@ import MarketingSignUp from "./MarketingSignUp";
 import ScheduleRedirect from "./ScheduleRedirect";
 import MarketingContentPage from "./MarketingContentPage";
 import SignUpConfirmation from "./SignUpConfirmation";
+import PartnerWithUsPage from "./PartnerWithUsPage";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/schedule" element={<ScheduleRedirect />} />
         <Route path="/mkt-content" element={<MarketingContentPage />} />
         <Route path="/signup-confirmation" element={<SignUpConfirmation />} />
+        <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
       </Routes>
     </Router>
   );
