@@ -122,7 +122,7 @@ export default function ContactUsPage() {
         </div>
 
         {submitted && (
-          <div className="mb-8 max-w-2xl mx-auto p-6 rounded-lg border" style={{ backgroundColor: '#FBF9F3', borderColor: 'rgba(57, 40, 29, 0.2)' }}>
+          <div className="mb-8 max-w-2xl mx-auto p-6 rounded-lg border" style={{ backgroundColor: 'rgba(255, 248, 220, 0.9)', borderColor: 'rgba(57, 40, 29, 0.2)' }}>
             <p className="text-[#39281D] font-medium text-center">
               Thank you for your message! We'll get back to you soon.
             </p>
