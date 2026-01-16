@@ -5,8 +5,8 @@ export default function VolunteerResources() {
   const [selectedRole, setSelectedRole] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const [showTraining, setShowTraining] = useState(false);
-  const [showPracticeLab, setShowPracticeLab] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState("advanced");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -156,7 +156,6 @@ export default function VolunteerResources() {
                     onClick={() => {
                       setSelectedRole(selectedRole === "tax-preparer" ? "" : "tax-preparer");
                       setShowTraining(false);
-                      setShowPracticeLab(false);
                     }}
                     className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#39281D] transition-all text-left"
                     style={{ 
@@ -180,7 +179,7 @@ export default function VolunteerResources() {
                     onClick={() => {
                       setSelectedRole(selectedRole === "senior-tax-preparer" ? "" : "senior-tax-preparer");
                       setShowTraining(false);
-                      setShowPracticeLab(false);
+                      setSelectedCourse("advanced");
                     }}
                     className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#39281D] transition-all text-left"
                     style={{ 
@@ -248,6 +247,11 @@ export default function VolunteerResources() {
                       </li>
                       <li>• Form 13615, Volunteer Agreement</li>
                     </ul>
+                    <div className="mt-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
+                      <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
+                        <strong>Note:</strong> The volunteer agreement test is only available after taking one of the other tests first.
+                      </p>
+                    </div>
                   </div>
 
                   <div>
@@ -262,6 +266,34 @@ export default function VolunteerResources() {
                       <li>• Uphold and reinforce IRS VITA standards and Triton Tax procedures</li>
                     </ul>
                   </div>
+                </div>
+
+                {/* Instructions Card */}
+                <div className="p-6 rounded-lg mb-8" style={{ border: '1px solid rgba(57, 40, 29, 0.15)', backgroundColor: 'rgba(224, 184, 79, 0.05)' }}>
+                  <h3 className="text-xl font-semibold text-[#39281D] mb-4" style={{ lineHeight: '1.4' }}>
+                    Instructions
+                  </h3>
+                  <ol className="space-y-4 text-base text-[#39281D] opacity-75" style={{ lineHeight: '1.6', listStyle: 'decimal', paddingLeft: '1.5rem' }}>
+                    <li>
+                      Access the according course required.
+                    </li>
+                    <li>
+                      Click skills workout and review all pages for each topic.
+                    </li>
+                    <li>
+                      Complete the practice lab that is related to each topic. The skills workout window will instruct you which training to do. Once you finish that tutorial, go back to step 2 and review the skills workout for the next topic in the course.
+                    </li>
+                  </ol>
+                  <div className="mt-4 mb-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
+                    <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
+                      <strong>Note:</strong> When you login, do not click "go to practice area". Scroll down and section 4-6 will have the corresponding tutorial as designated in the skills workout window.
+                    </p>
+                  </div>
+                  <ol className="space-y-4 text-base text-[#39281D] opacity-75" style={{ lineHeight: '1.6', listStyle: 'decimal', paddingLeft: '1.5rem' }} start={4}>
+                    <li>
+                      Once you finish all topics in your course(s), take the certification test(s) based on the requirements for your role.
+                    </li>
+                  </ol>
                 </div>
               </>
             )}
@@ -281,6 +313,11 @@ export default function VolunteerResources() {
                       <li>• Advanced certification</li>
                       <li>• Form 13615, Volunteer Agreement</li>
                     </ul>
+                    <div className="mt-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
+                      <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
+                        <strong>Note:</strong> The volunteer agreement test is only available after taking one of the other tests first.
+                      </p>
+                    </div>
                   </div>
 
                   <div>
@@ -295,6 +332,34 @@ export default function VolunteerResources() {
                       <li>• Comply with all IRS VITA and Triton Tax operational standards</li>
                     </ul>
                   </div>
+                </div>
+
+                {/* Instructions Card */}
+                <div className="p-6 rounded-lg mb-8" style={{ border: '1px solid rgba(57, 40, 29, 0.15)', backgroundColor: 'rgba(224, 184, 79, 0.05)' }}>
+                  <h3 className="text-xl font-semibold text-[#39281D] mb-4" style={{ lineHeight: '1.4' }}>
+                    Instructions
+                  </h3>
+                  <ol className="space-y-4 text-base text-[#39281D] opacity-75" style={{ lineHeight: '1.6', listStyle: 'decimal', paddingLeft: '1.5rem' }}>
+                    <li>
+                      Access the according course required.
+                    </li>
+                    <li>
+                      Click skills workout and review all pages for each topic.
+                    </li>
+                    <li>
+                      Complete the practice lab that is related to each topic. The skills workout window will instruct you which training to do. Once you finish that tutorial, go back to step 2 and review the skills workout for the next topic in the course.
+                    </li>
+                  </ol>
+                  <div className="mt-4 mb-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
+                    <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
+                      <strong>Note:</strong> When you login, do not click "go to practice area". Scroll down and section 4-6 will have the corresponding tutorial as designated in the skills workout window.
+                    </p>
+                  </div>
+                  <ol className="space-y-4 text-base text-[#39281D] opacity-75" style={{ lineHeight: '1.6', listStyle: 'decimal', paddingLeft: '1.5rem' }} start={4}>
+                    <li>
+                      Once you finish all topics in your course(s), take the certification test(s) based on the requirements for your role.
+                    </li>
+                  </ol>
                 </div>
               </>
             )}
@@ -314,6 +379,11 @@ export default function VolunteerResources() {
                       <li>• Basic certification</li>
                       <li>• Form 13615, Volunteer Agreement</li>
                     </ul>
+                    <div className="mt-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
+                      <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
+                        <strong>Note:</strong> The volunteer agreement test is only available after taking one of the other tests first.
+                      </p>
+                    </div>
                   </div>
 
                   <div>
@@ -327,6 +397,34 @@ export default function VolunteerResources() {
                       <li>• Support clinic operations and client flow under Site Coordinator direction</li>
                     </ul>
                   </div>
+                </div>
+
+                {/* Instructions Card */}
+                <div className="p-6 rounded-lg mb-8" style={{ border: '1px solid rgba(57, 40, 29, 0.15)', backgroundColor: 'rgba(224, 184, 79, 0.05)' }}>
+                  <h3 className="text-xl font-semibold text-[#39281D] mb-4" style={{ lineHeight: '1.4' }}>
+                    Instructions
+                  </h3>
+                  <ol className="space-y-4 text-base text-[#39281D] opacity-75" style={{ lineHeight: '1.6', listStyle: 'decimal', paddingLeft: '1.5rem' }}>
+                    <li>
+                      Access the according course required.
+                    </li>
+                    <li>
+                      Click skills workout and review all pages for each topic.
+                    </li>
+                    <li>
+                      Complete the practice lab that is related to each topic. The skills workout window will instruct you which training to do. Once you finish that tutorial, go back to step 2 and review the skills workout for the next topic in the course.
+                    </li>
+                  </ol>
+                  <div className="mt-4 mb-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
+                    <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
+                      <strong>Note:</strong> When you login, do not click "go to practice area". Scroll down and section 4-6 will have the corresponding tutorial as designated in the skills workout window.
+                    </p>
+                  </div>
+                  <ol className="space-y-4 text-base text-[#39281D] opacity-75" style={{ lineHeight: '1.6', listStyle: 'decimal', paddingLeft: '1.5rem' }} start={4}>
+                    <li>
+                      Once you finish all topics in your course(s), take the certification test(s) based on the requirements for your role.
+                    </li>
+                  </ol>
                 </div>
               </>
             )}
@@ -398,8 +496,56 @@ export default function VolunteerResources() {
                           Foreign Student
                         </a> </b>
                       </p>
+                      <p className="text-sm text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.6' }}>
+                        <b>Select a course to view:</b>
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        <button
+                          onClick={() => setSelectedCourse("advanced")}
+                          className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-colors ${
+                            selectedCourse === "advanced"
+                              ? "bg-[#3C431E] text-white"
+                              : "bg-transparent text-[#39281D] border border-[#39281D] border-opacity-30 hover:bg-[rgba(90,62,48,0.1)]"
+                          }`}
+                        >
+                          Advanced
+                        </button>
+                        <button
+                          onClick={() => setSelectedCourse("international")}
+                          className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-colors ${
+                            selectedCourse === "international"
+                              ? "bg-[#3C431E] text-white"
+                              : "bg-transparent text-[#39281D] border border-[#39281D] border-opacity-30 hover:bg-[rgba(90,62,48,0.1)]"
+                          }`}
+                        >
+                          International
+                        </button>
+                        <button
+                          onClick={() => setSelectedCourse("military")}
+                          className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-colors ${
+                            selectedCourse === "military"
+                              ? "bg-[#3C431E] text-white"
+                              : "bg-transparent text-[#39281D] border border-[#39281D] border-opacity-30 hover:bg-[rgba(90,62,48,0.1)]"
+                          }`}
+                        >
+                          Military
+                        </button>
+                        <button
+                          onClick={() => setSelectedCourse("foreign-student")}
+                          className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-colors ${
+                            selectedCourse === "foreign-student"
+                              ? "bg-[#3C431E] text-white"
+                              : "bg-transparent text-[#39281D] border border-[#39281D] border-opacity-30 hover:bg-[rgba(90,62,48,0.1)]"
+                          }`}
+                        >
+                          Foreign Student
+                        </button>
+                      </div>
                       <button
-                        onClick={() => setShowTraining(false)}
+                        onClick={() => {
+                          setShowTraining(false);
+                          setSelectedCourse("advanced");
+                        }}
                         className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
                       >
                         Hide Training
@@ -411,10 +557,18 @@ export default function VolunteerResources() {
                 {showTraining && (
                   <div className="mb-4">
                     <iframe
-                      src="https://apps.irs.gov/app/vita/01_student.jsp?level=advanced"
+                      src={
+                        selectedCourse === "advanced"
+                          ? "https://apps.irs.gov/app/vita/01_student.jsp?level=advanced"
+                          : selectedCourse === "international"
+                          ? "https://apps.irs.gov/app/vita/15_student.jsp?level=international"
+                          : selectedCourse === "military"
+                          ? "https://apps.irs.gov/app/vita/12_student.jsp?level=military"
+                          : "https://apps.irs.gov/app/vita/foreign_student_module.jsp"
+                      }
                       className="w-full border-0 rounded-lg"
                       style={{ height: '700px', minHeight: '500px', border: '1px solid rgba(57, 40, 29, 0.1)' }}
-                      title="IRS VITA Training - Advanced & Specialty"
+                      title={`IRS VITA Training - ${selectedCourse === "advanced" ? "Advanced" : selectedCourse === "international" ? "International" : selectedCourse === "military" ? "Military" : "Foreign Student"}`}
                     />
                   </div>
                 )}
@@ -435,46 +589,15 @@ export default function VolunteerResources() {
                         <p className="text-sm text-[#39281D] opacity-70 mb-3">
                           Note: Leave the site number empty when creating an account.
                         </p>
-                        {!showPracticeLab ? (
-                          <button
-                            onClick={() => setShowPracticeLab(true)}
-                            className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                          >
-                            Open Practice Lab
-                          </button>
-                        ) : (
-                          <>
-                            <p className="text-sm text-[#39281D] opacity-60 mb-3">
-                              If the practice lab doesn't load below, use this link to access it directly:{' '}
-                              <a
-                                href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="underline"
-                              >
-                                Practice Lab
-                              </a>
-                            </p>
-                            <button
-                              onClick={() => setShowPracticeLab(false)}
-                              className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                            >
-                              Hide Practice Lab
-                            </button>
-                          </>
-                        )}
+                        <a
+                          href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
+                        >
+                          Open Practice Lab
+                        </a>
                       </div>
-                      
-                      {showPracticeLab && (
-                        <div className="mb-4">
-                          <iframe
-                            src="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                            className="w-full border-0 rounded-lg"
-                            style={{ height: '700px', minHeight: '500px', border: '1px solid rgba(57, 40, 29, 0.1)' }}
-                            title="TaxSlayer Practice Lab"
-                          />
-                        </div>
-                      )}
                     </div>
 
                     {/* Test */}
@@ -487,10 +610,9 @@ export default function VolunteerResources() {
                           href="https://linklearncertification.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-base text-[#39281D] underline hover:opacity-75"
-                          style={{ lineHeight: '1.6' }}
+                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
                         >
-                          VITA/TCE Central - Certification Tests
+                          Open Testing Center
                         </a>
                       </div>
                     </div>
@@ -615,46 +737,15 @@ export default function VolunteerResources() {
                         <p className="text-sm text-[#39281D] opacity-70 mb-3">
                           Note: Leave the site number empty when creating an account.
                         </p>
-                        {!showPracticeLab ? (
-                          <button
-                            onClick={() => setShowPracticeLab(true)}
-                            className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                          >
-                            Open Practice Lab
-                          </button>
-                        ) : (
-                          <>
-                            <p className="text-sm text-[#39281D] opacity-60 mb-3">
-                              If the practice lab doesn't load below, use this link to access it directly:{' '}
-                              <a
-                                href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="underline"
-                              >
-                                Practice Lab
-                              </a>
-                            </p>
-                            <button
-                              onClick={() => setShowPracticeLab(false)}
-                              className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                            >
-                              Hide Practice Lab
-                            </button>
-                          </>
-                        )}
+                        <a
+                          href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
+                        >
+                          Open Practice Lab
+                        </a>
                       </div>
-                      
-                      {showPracticeLab && (
-                        <div className="mb-4">
-                          <iframe
-                            src="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                            className="w-full border-0 rounded-lg"
-                            style={{ height: '700px', minHeight: '500px', border: '1px solid rgba(57, 40, 29, 0.1)' }}
-                            title="TaxSlayer Practice Lab"
-                          />
-                        </div>
-                      )}
                     </div>
 
                     {/* Test */}
@@ -667,10 +758,9 @@ export default function VolunteerResources() {
                           href="https://linklearncertification.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-base text-[#39281D] underline hover:opacity-75"
-                          style={{ lineHeight: '1.6' }}
+                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
                         >
-                          VITA/TCE Central - Certification Tests
+                          Open Testing Center
                         </a>
                       </div>
                     </div>
@@ -795,46 +885,15 @@ export default function VolunteerResources() {
                         <p className="text-sm text-[#39281D] opacity-70 mb-3">
                           Note: Leave the site number empty when creating an account.
                         </p>
-                        {!showPracticeLab ? (
-                          <button
-                            onClick={() => setShowPracticeLab(true)}
-                            className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                          >
-                            Open Practice Lab
-                          </button>
-                        ) : (
-                          <>
-                            <p className="text-sm text-[#39281D] opacity-60 mb-3">
-                              If the practice lab doesn't load below, use this link to access it directly:{' '}
-                              <a
-                                href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="underline"
-                              >
-                                Practice Lab
-                              </a>
-                            </p>
-                            <button
-                              onClick={() => setShowPracticeLab(false)}
-                              className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                            >
-                              Hide Practice Lab
-                            </button>
-                          </>
-                        )}
+                        <a
+                          href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
+                        >
+                          Open Practice Lab
+                        </a>
                       </div>
-                      
-                      {showPracticeLab && (
-                        <div className="mb-4">
-                          <iframe
-                            src="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                            className="w-full border-0 rounded-lg"
-                            style={{ height: '700px', minHeight: '500px', border: '1px solid rgba(57, 40, 29, 0.1)' }}
-                            title="TaxSlayer Practice Lab"
-                          />
-                        </div>
-                      )}
                     </div>
 
                     {/* Test */}
@@ -847,10 +906,9 @@ export default function VolunteerResources() {
                           href="https://linklearncertification.com/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-base text-[#39281D] underline hover:opacity-75"
-                          style={{ lineHeight: '1.6' }}
+                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
                         >
-                          VITA/TCE Central - Certification Tests
+                          Open Testing Center
                         </a>
                       </div>
                     </div>

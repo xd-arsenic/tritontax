@@ -136,7 +136,7 @@ export default function TaxPreparerSignUp() {
         >
           {/* Hidden inputs for FormSubmit customization */}
           <input type="hidden" name="_subject" value="Tax Preparer Application - Triton Tax" />
-          <input type="hidden" name="_next" value={`${window.location.origin}/tax-preparer-signup?submitted=true`} />
+          <input type="hidden" name="_next" value={`${window.location.origin}/signup-confirmation`} />
           <input type="hidden" name="_captcha" value="false" />
 
           {/* A) Contact Information */}
