@@ -7,6 +7,7 @@ import ContactUsPage from "./ContactUsPage";
 import TaxPreparerSignUp from "./TaxPreparerSignUp";
 import MarketingSignUp from "./MarketingSignUp";
 import ScheduleRedirect from "./ScheduleRedirect";
+import MarketingContentPage from "./MarketingContentPage";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/schedule" element={<ScheduleRedirect />} />
+        <Route path="/mkt-content" element={<MarketingContentPage />} />
       </Routes>
     </Router>
   );

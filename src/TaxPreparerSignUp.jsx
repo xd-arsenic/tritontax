@@ -34,7 +34,7 @@ export default function TaxPreparerSignUp() {
               <div>
                 <div className="text-xl font-extrabold tracking-tight text-[#39281D]">Triton Tax</div>
                 <div className="text-xs font-medium text-[#0F1108] opacity-70">
-                  A free tax preparation program
+                  An IRS VITA Program
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function TaxPreparerSignUp() {
             Become a Tax Preparer
           </h1>
           <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
-            Apply to join our team and help provide free tax assistance to the UC San Diego community
+            Apply to join our team and help provide free tax assistance to the Triton Tax at UC San Diego community
           </p>
         </div>
 
@@ -769,7 +769,7 @@ export default function TaxPreparerSignUp() {
                 Triton Tax
               </h3>
               <p className="text-sm mb-4" style={{ color: '#FBF9F3', opacity: 0.8, lineHeight: '1.6' }}>
-                An IRS-certified VITA program providing free tax assistance to the UC San Diego community.
+                An IRS VITA Program providing free tax assistance to the Triton Tax at UC San Diego community.
               </p>
             </div>
 
@@ -820,7 +820,7 @@ export default function TaxPreparerSignUp() {
                 </li>
                 <li>
                   <Link className="hover:opacity-100 transition-opacity" to="/contact" style={{ color: '#FBF9F3', opacity: 0.8 }}>
-                    Contact Us
+                    Contact Form
                   </Link>
                 </li>
               </ul>
@@ -850,7 +850,7 @@ export default function TaxPreparerSignUp() {
                 Triton Tax
               </h3>
               <p className="text-sm mb-4" style={{ color: '#FBF9F3', opacity: 0.8, lineHeight: '1.6' }}>
-                An IRS-certified VITA program providing free tax assistance to the UC San Diego community.
+                An IRS VITA Program providing free tax assistance to the Triton Tax at UC San Diego community.
               </p>
             </div>
             
@@ -898,9 +898,9 @@ export default function TaxPreparerSignUp() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm" style={{ color: '#FBF9F3', opacity: 0.7 }}>
               <span>© {new Date().getFullYear()} Triton Tax. All rights reserved.</span>
               <div className="flex flex-wrap justify-center gap-4 text-xs">
-                <span>A free tax preparation program</span>
+                <span>An IRS VITA Program</span>
                 <span>•</span>
-                <span>UC San Diego</span>
+                <span>Triton Tax at UC San Diego</span>
               </div>
             </div>
           </div>

@@ -179,7 +179,7 @@ export default function HomePage() {
                 <div>
                   <div className="text-xl font-extrabold tracking-tight text-[#39281D]">Triton Tax</div>
                   <div className="text-xs font-medium text-[#0F1108] opacity-70">
-                    A free tax preparation program
+                    An IRS VITA Program
                   </div>
                 </div>
               </div>
@@ -513,7 +513,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#F5F5F4] mb-2" style={{ lineHeight: '1.4' }}>Make Real Impact</h3>
-                  <p className="text-base text-[#F5F5F4]" style={{ lineHeight: '1.6' }}>Help UC San Diego community access free tax services</p>
+                  <p className="text-base text-[#F5F5F4]" style={{ lineHeight: '1.6' }}>Help Triton Tax at UC San Diego community access free tax services</p>
                 </div>
               </div>
 
@@ -554,9 +554,17 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold text-[#39281D] mb-3 text-center" style={{ lineHeight: '1.4' }}>
                     You sign up
                   </h3>
-                  <p className="text-base text-[#39281D] text-center" style={{ lineHeight: '1.6', opacity: 0.75 }}>
+                  <p className="text-base text-[#39281D] mb-4 text-center" style={{ lineHeight: '1.6', opacity: 0.75 }}>
                     Complete our volunteer application—it takes just a few minutes.
                   </p>
+                  <div className="text-center mt-6">
+                    <Link
+                      to="/signup"
+                      className="inline-flex items-center text-base font-semibold text-[#39281D] hover:opacity-75 transition-opacity"
+                    >
+                      Apply Now <span className="ml-1">→</span>
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Arrow 1 */}
@@ -597,9 +605,17 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold text-[#39281D] mb-3 text-center" style={{ lineHeight: '1.4' }}>
                     You get certified
                   </h3>
-                  <p className="text-base text-[#39281D] text-center" style={{ lineHeight: '1.6', opacity: 0.75 }}>
+                  <p className="text-base text-[#39281D] mb-4 text-center" style={{ lineHeight: '1.6', opacity: 0.75 }}>
                     Complete the IRS certification course and pass the exam within two weeks.
                   </p>
+                  <div className="text-center mt-6">
+                    <Link
+                      to="/volunteer-resources"
+                      className="inline-flex items-center text-base font-semibold text-[#39281D] hover:opacity-75 transition-opacity"
+                    >
+                      Volunteer Resources <span className="ml-1">→</span>
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Arrow 2 */}
@@ -648,7 +664,7 @@ export default function HomePage() {
                       to="/signup"
                       className="inline-flex items-center text-base font-semibold text-[#39281D] hover:opacity-75 transition-opacity"
                     >
-                      Apply Now <span className="ml-1">→</span>
+                      Get Started <span className="ml-1">→</span>
                     </Link>
                   </div>
                 </div>
@@ -672,7 +688,7 @@ export default function HomePage() {
               </p>
             </div>
             <p className="text-md text-[#39281D] mb-3 mx-auto" style={{ lineHeight: '1.7', opacity: 0.8, maxWidth: '680px' }}>
-              Our goal is to provide free, reliable tax assistance to at least 7,500 members of the UC San Diego community and surrounding areas this tax season, while training student volunteers through hands-on, IRS-certified experience.
+              Our goal is to provide free, reliable tax assistance to at least 7,500 members of the Triton Tax at UC San Diego community and surrounding areas this tax season, while training student volunteers through hands-on, IRS-certified experience.
             </p>
             <p className="text-md text-[#39281D] italic mb-6" style={{ lineHeight: '1.6', opacity: 0.6 }}>
               With your support, we can make that goal a reality.
@@ -862,7 +878,7 @@ export default function HomePage() {
                   Triton Tax
                 </h3>
                 <p className="text-sm mb-4" style={{ color: '#FBF9F3', opacity: 0.8, lineHeight: '1.6' }}>
-                  An IRS-certified VITA program providing free tax assistance to the UC San Diego community.
+                  An IRS VITA Program providing free tax assistance to the Triton Tax at UC San Diego community.
                 </p>
               </div>
 
@@ -913,7 +929,7 @@ export default function HomePage() {
                   </li>
                   <li>
                     <Link className="hover:opacity-100 transition-opacity" to="/contact" style={{ color: '#FBF9F3', opacity: 0.8 }}>
-                      Contact Us
+                      Contact Form
                     </Link>
                   </li>
                 </ul>
@@ -943,7 +959,7 @@ export default function HomePage() {
                   Triton Tax
                 </h3>
                 <p className="text-sm mb-4" style={{ color: '#FBF9F3', opacity: 0.8, lineHeight: '1.6' }}>
-                  An IRS-certified VITA program providing free tax assistance to the UC San Diego community.
+                  An IRS VITA Program providing free tax assistance to the Triton Tax at UC San Diego community.
                 </p>
               </div>
               
@@ -991,9 +1007,9 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm" style={{ color: '#FBF9F3', opacity: 0.7 }}>
                 <span>© {new Date().getFullYear()} Triton Tax. All rights reserved.</span>
                 <div className="flex flex-wrap justify-center gap-4 text-xs">
-                  <span>A free tax preparation program</span>
+                  <span>An IRS VITA Program</span>
                   <span>•</span>
-                  <span>UC San Diego</span>
+                  <span>Triton Tax at UC San Diego</span>
                 </div>
               </div>
             </div>
