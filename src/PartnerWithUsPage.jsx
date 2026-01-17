@@ -132,23 +132,23 @@ export default function PartnerWithUsPage() {
 
         {/* Who We Are */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+          <h2 className="text-3xl font-semibold text-[#081119] mb-4" style={{ lineHeight: '1.4' }}>
             Who We Are
           </h2>
-          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-4" style={{ lineHeight: '1.6' }}>
             Triton Tax is an IRS-certified Volunteer Income Tax Assistance (VITA) program based at UC San Diego. We provide free, reliable tax assistance to students and members of the surrounding community while training student volunteers through hands-on, IRS-certified experience.
           </p>
-          <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90" style={{ lineHeight: '1.6' }}>
             We are affiliated with the MAAC Project, a non-profit organization that has provided free tax assistance to communities across San Diego County through its VITA program for over 20 years. Through this affiliation, Triton Tax operates in coordination with established VITA best practices and compliance standards.
           </p>
         </div>
 
         {/* Why Partner With Us */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+          <h2 className="text-3xl font-semibold text-[#081119] mb-4" style={{ lineHeight: '1.4' }}>
             Why Partner With Us
           </h2>
-          <p className="text-lg text-[#39281D] opacity-75 mb-8" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-8" style={{ lineHeight: '1.6' }}>
             Partnerships play a critical role in expanding access to free tax assistance and financial support services. Organizations partner with Triton Tax to:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -177,16 +177,25 @@ export default function PartnerWithUsPage() {
 
         {/* Types of Partnerships We Welcome */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+          <h2 className="text-3xl font-semibold text-[#081119] mb-4" style={{ lineHeight: '1.4' }}>
             Types of Partnerships We Welcome
           </h2>
-          <p className="text-lg text-[#39281D] opacity-75 mb-6" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-6" style={{ lineHeight: '1.6' }}>
             We work with organizations and institutions interested in expanding access to free tax assistance and supporting individuals and families during tax season. Partnerships vary based on community needs, but commonly include the following:
           </p>
-          
-          <div className="space-y-6 text-left">
-            <div>
-              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+          <style>{`
+            .partnership-grid {
+              grid-template-columns: 1fr;
+            }
+            @media (min-width: 768px) {
+              .partnership-grid {
+                grid-template-columns: 1fr 2fr;
+              }
+            }
+          `}</style>
+          <div className="space-y-6 md:space-y-8" style={{ paddingLeft: '3rem' }}>
+            <div className="grid gap-6 md:gap-8 md:items-start partnership-grid">
+              <h3 className="text-xl font-semibold" style={{ lineHeight: '1.4', color: '#132A3E' }}>
                 Community Organizations
               </h3>
               <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
@@ -194,8 +203,8 @@ export default function PartnerWithUsPage() {
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+            <div className="grid gap-6 md:gap-8 md:items-start partnership-grid">
+              <h3 className="text-xl font-semibold" style={{ lineHeight: '1.4', color: '#132A3E' }}>
                 Schools and Educational Institutions
               </h3>
               <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
@@ -203,8 +212,8 @@ export default function PartnerWithUsPage() {
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+            <div className="grid gap-6 md:gap-8 md:items-start partnership-grid">
+              <h3 className="text-xl font-semibold" style={{ lineHeight: '1.4', color: '#132A3E' }}>
                 Campus Units
               </h3>
               <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
@@ -212,8 +221,8 @@ export default function PartnerWithUsPage() {
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+            <div className="grid gap-6 md:gap-8 md:items-start partnership-grid">
+              <h3 className="text-xl font-semibold" style={{ lineHeight: '1.4', color: '#132A3E' }}>
                 Housing Providers and Housing Organizations
               </h3>
               <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
@@ -221,8 +230,8 @@ export default function PartnerWithUsPage() {
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-2" style={{ lineHeight: '1.4', color: '#132A3E' }}>
+            <div className="grid gap-6 md:gap-8 md:items-start partnership-grid">
+              <h3 className="text-xl font-semibold" style={{ lineHeight: '1.4', color: '#132A3E' }}>
                 Workforce Development and Job Training Programs
               </h3>
               <p className="text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6' }}>
@@ -234,10 +243,10 @@ export default function PartnerWithUsPage() {
 
         {/* What Partnership Can Look Like */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+          <h2 className="text-3xl font-semibold text-[#081119] mb-4" style={{ lineHeight: '1.4' }}>
             What Partnership Can Look Like
           </h2>
-          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-4" style={{ lineHeight: '1.6' }}>
             Partnerships are flexible and shaped around shared goals and community needs. Common forms of collaboration include:
           </p>
           <ul className="list-disc list-inside space-y-2 text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6', paddingLeft: '1.5rem' }}>
@@ -248,23 +257,23 @@ export default function PartnerWithUsPage() {
             <li>Supporting access needs such as transportation or space coordination</li>
             <li>Collaborating on community-focused service initiatives</li>
           </ul>
-          <p className="text-lg text-[#39281D] opacity-75 font-medium" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 font-medium" style={{ lineHeight: '1.6' }}>
             All services provided through Triton Tax are offered free of charge.
           </p>
         </div>
 
         {/* Our Standards & Compliance */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-4 text-center" style={{ lineHeight: '1.4' }}>
+          <h2 className="text-3xl font-semibold text-[#081119] mb-4" style={{ lineHeight: '1.4' }}>
             Our Standards & Compliance
           </h2>
-          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-4" style={{ lineHeight: '1.6' }}>
             Triton Tax operates under established IRS VITA guidelines and quality standards.
           </p>
-          <p className="text-lg text-[#39281D] opacity-75 mb-4" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-4" style={{ lineHeight: '1.6' }}>
             Although federal law does not require tax preparers, including paid preparers, to hold formal degrees or licensure, all Triton Tax volunteers complete IRS training and certification, with returns reviewed by senior volunteers who have completed advanced tax law training.
           </p>
-          <p className="text-lg text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-2" style={{ lineHeight: '1.6' }}>
             Additional standards include:
           </p>
           <ul className="list-disc list-inside space-y-2 text-lg text-[#39281D] opacity-75" style={{ lineHeight: '1.6', paddingLeft: '1.5rem' }}>
@@ -277,13 +286,13 @@ export default function PartnerWithUsPage() {
 
         {/* Interested in Partnering With Us? */}
         <div className="mb-12 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-[#0E1E2C] mb-6 text-center" style={{ lineHeight: '1.4' }}>
+          <h2 className="text-3xl font-semibold text-[#081119] mb-6" style={{ lineHeight: '1.4' }}>
             Interested in Partnering With Us?
           </h2>
-          <p className="text-lg text-[#39281D] opacity-75 mb-8" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-8" style={{ lineHeight: '1.6' }}>
             We welcome conversations with organizations interested in supporting access to free tax assistance.
           </p>
-          <p className="text-lg text-[#39281D] opacity-75 mb-8" style={{ lineHeight: '1.6' }}>
+          <p className="text-lg text-[#39281D] opacity-90 mb-8" style={{ lineHeight: '1.6' }}>
             If you'd like to learn more or explore a potential partnership, please reach out to our team.
           </p>
         </div>
@@ -296,10 +305,10 @@ export default function PartnerWithUsPage() {
           </div>
         )}
 
-        <div className="max-w-5xl mx-auto md:ml-[10%]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-6">
             {/* Contact Form */}
-            <div>
+            <div className="flex-[4]">
             <form 
               action="https://formsubmit.co/support@tritontax.org" 
               method="POST"
@@ -436,10 +445,10 @@ export default function PartnerWithUsPage() {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-6 md:pt-16">
-              <p className="text-base font-medium text-[#39281D] mb-4">Or contact us by:</p>
-              <div>
-                <h2 className="text-xl font-semibold text-[#0E1E2C] mb-2" style={{ lineHeight: '1.4' }}>Email</h2>
+            <div className="space-y-6 md:pt-0 md:flex-[2] md:self-center">
+              <p className="text-base font-medium text-gray-600 mb-4 md:text-right">Or contact us by:</p>
+              <div className="md:text-right">
+                <h2 className="text-lg font-semibold text-gray-700 mb-2" style={{ lineHeight: '1.4' }}>Email</h2>
                 <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
                   For partnership inquiries:
                 </p>
@@ -451,8 +460,8 @@ export default function PartnerWithUsPage() {
                 </a>
               </div>
 
-              <div>
-                <h2 className="text-xl font-semibold text-[#0E1E2C] mb-2" style={{ lineHeight: '1.4' }}>Phone</h2>
+              <div className="md:text-right">
+                <h2 className="text-lg font-semibold text-gray-700 mb-2" style={{ lineHeight: '1.4' }}>Phone</h2>
                 <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
                   Call or text us:
                 </p>
@@ -464,23 +473,25 @@ export default function PartnerWithUsPage() {
                 </a>
               </div>
 
-              <div>
-                <h2 className="text-xl font-semibold text-[#0E1E2C] mb-2" style={{ lineHeight: '1.4' }}>Schedule a Meeting</h2>
+              <div className="md:text-right">
+                <h2 className="text-lg font-semibold text-gray-700 mb-2" style={{ lineHeight: '1.4' }}>Schedule a Meeting</h2>
                 <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
                   Book a 30-minute appointment<br />
                   to discuss partnership opportunities.
                 </p>
-                <a
-                  href="https://calendly.com/dnegreteg0001/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block rounded-full bg-[#E0B84F] px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors"
-                  style={{ boxShadow: '0 3px 12px rgba(224, 184, 79, 0.35), 0 1px 4px rgba(224, 184, 79, 0.25)' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#D4A843'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E0B84F'}
-                >
-                  Book an Appointment
-                </a>
+                <div className="md:flex md:justify-end">
+                  <a
+                    href="https://calendly.com/dnegreteg0001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-full bg-[#E0B84F] px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors"
+                    style={{ boxShadow: '0 3px 12px rgba(224, 184, 79, 0.35), 0 1px 4px rgba(224, 184, 79, 0.25)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#D4A843'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E0B84F'}
+                  >
+                    Book an Appointment
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -137,7 +137,17 @@ export default function ContactUsPage() {
           </div>
         )}
 
-        <div className="grid gap-16 md:grid-cols-2 max-w-5xl mx-auto">
+        <style>{`
+          .contact-grid {
+            grid-template-columns: 1fr;
+          }
+          @media (min-width: 768px) {
+            .contact-grid {
+              grid-template-columns: 2fr 1fr;
+            }
+          }
+        `}</style>
+        <div className="grid gap-16 contact-grid max-w-5xl mx-auto">
           {/* Contact Form */}
           <div>
             <h2 className="text-2xl font-semibold text-[#39281D] mb-6" style={{ lineHeight: '1.4' }}>Send us a message</h2>
@@ -250,39 +260,40 @@ export default function ContactUsPage() {
 
           {/* Contact Information */}
           <div className="space-y-6">
+            <p className="text-sm font-medium text-gray-600 mb-4">Or contact us by:</p>
             <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Email</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
+              <h2 className="text-lg font-semibold text-gray-700 mb-2" style={{ lineHeight: '1.2' }}>Email</h2>
+              <p className="text-sm text-[#39281D] opacity-70 mb-2" style={{ lineHeight: '1.3' }}>
                 For general inquiries, volunteer questions, or program information:
               </p>
               <a 
                 href="mailto:support@tritontax.org" 
-                className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
+                className="text-sm text-[#39281D] opacity-75 hover:opacity-70 underline font-semibold transition-opacity"
               >
                 support@tritontax.org
               </a>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Phone</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.5' }}>
+              <h2 className="text-lg font-semibold text-gray-700 mb-2" style={{ lineHeight: '1.2' }}>Phone</h2>
+              <p className="text-sm text-[#39281D] opacity-70 mb-2" style={{ lineHeight: '1.3' }}>
                 Call or text us:
               </p>
               <a 
                 href="tel:7472145063" 
-                className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
+                className="text-sm text-[#39281D] opacity-75 hover:opacity-70 underline font-semibold transition-opacity"
               >
                 (747) 214-5063
               </a>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Schedule a Meeting</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
+              <h2 className="text-lg font-semibold text-gray-700 mb-2" style={{ lineHeight: '1.2' }}>Schedule a Meeting</h2>
+              <p className="text-sm text-[#39281D] opacity-70 mb-3" style={{ lineHeight: '1.3' }}>
                 Book a 30-minute appointment to discuss volunteering opportunities or ask questions.
               </p>
               <a
-                href="https://calendly.com/dnegreteg0001/30min"
+                href="https://calendly.com/dnegreteg0001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block rounded-full bg-[#E0B84F] px-4 py-2 text-sm font-semibold text-[#39281D] text-center transition-colors"
@@ -295,9 +306,9 @@ export default function ContactUsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-[#39281D] mb-2" style={{ lineHeight: '1.4' }}>Have Questions?</h2>
-              <p className="text-sm leading-relaxed text-[#39281D] opacity-75 mb-3" style={{ lineHeight: '1.5' }}>
-                Check out our <Link to="/faq" className="underline text-[#39281D] hover:opacity-70 transition-opacity font-semibold">Frequently Asked Questions</Link> page for answers to common questions about volunteering, training, and the program.
+              <h2 className="text-lg font-semibold text-gray-700 mb-2" style={{ lineHeight: '1.2' }}>Have Questions?</h2>
+              <p className="text-sm text-[#39281D] opacity-70 mb-3" style={{ lineHeight: '1.3' }}>
+                Check out our <Link to="/faq" className="underline text-[#39281D] opacity-75 hover:opacity-70 transition-opacity font-semibold">Frequently Asked Questions</Link> page for answers to common questions about volunteering, training, and the program.
               </p>
               <Link
                 to="/faq"

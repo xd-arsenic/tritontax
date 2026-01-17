@@ -470,47 +470,47 @@ export default function VolunteerResources() {
                     <>
                       <div className="mb-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
                         <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
-                          If the training doesn't load below, use the links to access training directly. You also need to complete one specialty course (International, Military, or Foreign Student):{' '}
-                          <b>
-                          <a
-                            href="https://apps.irs.gov/app/vita/01_student.jsp?level=advanced"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                          >
-                            Advanced
-                          </a>,{' '}
-                          <a
-                            href="https://apps.irs.gov/app/vita/15_student.jsp?level=international"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                          >
-                            International
-                          </a>,{' '}
-                          <a
-                            href="https://apps.irs.gov/app/vita/12_student.jsp?level=military"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                          >
-                            Military
-                          </a>, or{' '}
-                          <a
-                            href="https://apps.irs.gov/app/vita/foreign_student_module.jsp"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                          >
-                            Foreign Student
-                          </a> </b>
-                        </p>
+                        If the training doesn't load below, use the links to access training directly. You also need to complete one specialty course (International, Military, or Foreign Student):{' '}
+                        <b>
+                        <a
+                          href="https://apps.irs.gov/app/vita/01_student.jsp?level=advanced"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          Advanced
+                        </a>,{' '}
+                        <a
+                          href="https://apps.irs.gov/app/vita/15_student.jsp?level=international"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          International
+                        </a>,{' '}
+                        <a
+                          href="https://apps.irs.gov/app/vita/12_student.jsp?level=military"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          Military
+                        </a>, or{' '}
+                        <a
+                          href="https://apps.irs.gov/app/vita/foreign_student_module.jsp"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          Foreign Student
+                        </a> </b>
+                      </p>
                       </div>
                       <p className="text-sm text-[#39281D] opacity-75 mb-2" style={{ lineHeight: '1.6' }}>
                         <b>Select a course to view:</b>
                       </p>
                       <div className="flex flex-wrap gap-2 mb-3">
-                        <button
+                      <button
                           onClick={() => setSelectedCourse("advanced")}
                           className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-colors ${
                             selectedCourse === "advanced"
@@ -599,12 +599,12 @@ export default function VolunteerResources() {
                         <p className="text-sm text-[#39281D] opacity-70 mb-3">
                           Note: Leave the site number empty when creating an account.
                         </p>
-                        <a
-                          href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                        >
+                              <a
+                                href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
+                            >
                           Open Practice Lab
                         </a>
                       </div>
@@ -701,16 +701,16 @@ export default function VolunteerResources() {
                     <>
                       <div className="mb-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
                         <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
-                          If the training doesn't load below, use the link to access training directly:{' '}
-                          <a
-                            href="https://apps.irs.gov/app/vita/01_student.jsp?level=advanced"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                          >
-                            Advanced Training
-                          </a>
-                        </p>
+                        If the training doesn't load below, use the link to access training directly:{' '}
+                        <a
+                          href="https://apps.irs.gov/app/vita/01_student.jsp?level=advanced"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          Advanced Training
+                        </a>
+                      </p>
                       </div>
                       <button
                         onClick={() => setShowTraining(false)}
@@ -749,12 +749,12 @@ export default function VolunteerResources() {
                         <p className="text-sm text-[#39281D] opacity-70 mb-3">
                           Note: Leave the site number empty when creating an account.
                         </p>
-                        <a
-                          href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                        >
+                              <a
+                                href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
+                            >
                           Open Practice Lab
                         </a>
                       </div>
@@ -851,16 +851,16 @@ export default function VolunteerResources() {
                     <>
                       <div className="mb-4 p-4 rounded-lg" style={{ backgroundColor: 'rgba(57, 40, 29, 0.05)', border: '1px solid rgba(57, 40, 29, 0.1)' }}>
                         <p className="text-sm text-[#39281D] opacity-80" style={{ lineHeight: '1.6' }}>
-                          If the training doesn't load below, use the link to access training directly:{' '}
-                          <a
-                            href="https://apps.irs.gov/app/vita/01_student.jsp?level=basic"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                          >
-                            Basic Training
-                          </a>
-                        </p>
+                        If the training doesn't load below, use the link to access training directly:{' '}
+                        <a
+                          href="https://apps.irs.gov/app/vita/01_student.jsp?level=basic"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          Basic Training
+                        </a>
+                      </p>
                       </div>
                       <button
                         onClick={() => setShowTraining(false)}
@@ -899,12 +899,12 @@ export default function VolunteerResources() {
                         <p className="text-sm text-[#39281D] opacity-70 mb-3">
                           Note: Leave the site number empty when creating an account.
                         </p>
-                        <a
-                          href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
-                        >
+                              <a
+                                href="https://vita.taxslayerpro.com/IRSTraining/en/Account/Access"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              className="inline-block rounded-full bg-[#5A3E30] px-4 py-1.5 text-xs font-semibold text-white text-center transition-colors hover:bg-[#39281D]"
+                            >
                           Open Practice Lab
                         </a>
                       </div>
@@ -1187,11 +1187,11 @@ export default function VolunteerResources() {
                     (747) 214-5063
                   </a>
                 </li>
-                  <li>
-                    <Link className="hover:opacity-100 transition-opacity" to="/contact" style={{ color: '#FBF9F3', opacity: 0.8 }}>
+                <li>
+                  <Link className="hover:opacity-100 transition-opacity" to="/contact" style={{ color: '#FBF9F3', opacity: 0.8 }}>
                       Contact Form
-                    </Link>
-                  </li>
+                  </Link>
+                </li>
               </ul>
             </div>
 
