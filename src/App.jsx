@@ -10,6 +10,7 @@ import ScheduleRedirect from "./ScheduleRedirect";
 import MarketingContentPage from "./MarketingContentPage";
 import SignUpConfirmation from "./SignUpConfirmation";
 import PartnerWithUsPage from "./PartnerWithUsPage";
+import InstagramLandingPage from "./InstagramLandingPage";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/mkt-content" element={<MarketingContentPage />} />
         <Route path="/signup-confirmation" element={<SignUpConfirmation />} />
         <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
+        <Route path="/instagram-landing" element={<InstagramLandingPage />} />
       </Routes>
     </Router>
   );
