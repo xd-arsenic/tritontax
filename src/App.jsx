@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./HomePage";
 import VolunteerResources from "./VolunteerResources";
 import SignUpPage from "./SignUpPage";
@@ -21,6 +21,7 @@ export default function App() {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/tax-preparer-signup" element={<TaxPreparerSignUp />} />
         <Route path="/marketing-signup" element={<MarketingSignUp />} />
+        <Route path="/marketing" element={<Navigate to="/marketing-signup" replace />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/schedule" element={<ScheduleRedirect />} />

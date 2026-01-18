@@ -253,13 +253,13 @@ export default function MarketingSignUp() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="college" className="block text-sm font-medium text-[#39281D] mb-2">
-                    College / Major <span className="text-red-600">*</span>
+                  <label htmlFor="major" className="block text-sm font-medium text-[#39281D] mb-2">
+                    Major <span className="text-red-600">*</span>
                   </label>
                   <input
                     type="text"
-                    name="college"
-                    id="college"
+                    name="major"
+                    id="major"
                     required
                     className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] transition-all"
                     style={{ 
@@ -275,7 +275,7 @@ export default function MarketingSignUp() {
                       e.currentTarget.style.borderColor = 'rgba(57, 40, 29, 0.15)';
                       e.currentTarget.style.boxShadow = '0 1px 2px rgba(57, 40, 29, 0.05)';
                     }}
-                    placeholder="e.g., Sixth College / Computer Science"
+                    placeholder="e.g., Computer Science"
                   />
                 </div>
 

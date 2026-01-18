@@ -251,13 +251,13 @@ export default function TaxPreparerSignUp() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="college" className="block text-sm font-medium text-[#39281D] mb-2">
-                    College / Major <span className="text-red-600">*</span>
+                  <label htmlFor="major" className="block text-sm font-medium text-[#39281D] mb-2">
+                    Major <span className="text-red-600">*</span>
                   </label>
                   <input
                     type="text"
-                    name="college"
-                    id="college"
+                    name="major"
+                    id="major"
                     required
                     className="w-full px-4 py-2.5 rounded-lg focus:outline-none text-[#39281D] transition-all"
                     style={{ 
