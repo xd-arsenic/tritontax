@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import HomePage from "./HomePage";
 import VolunteerResources from "./VolunteerResources";
 import SignUpPage from "./SignUpPage";
@@ -12,9 +13,26 @@ import SignUpConfirmation from "./SignUpConfirmation";
 import PartnerWithUsPage from "./PartnerWithUsPage";
 import InstagramLandingPage from "./InstagramLandingPage";
 
+// Component to track page views on route changes
+function PageViewTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Track page view when route changes
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('config', 'G-FHYPGTRTJW', {
+        page_path: location.pathname + location.search + location.hash,
+      });
+    }
+  }, [location]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <Router>
+      <PageViewTracker />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/volunteer-resources" element={<VolunteerResources />} />
