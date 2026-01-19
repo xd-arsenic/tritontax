@@ -453,10 +453,10 @@ export default function PartnerWithUsPage() {
                   For partnership inquiries:
                 </p>
                 <a 
-                  href="mailto:support@tritontax.org" 
+                  href="mailto:partner@tr@@itontax.org" 
                   className="text-base text-[#39281D] hover:opacity-70 underline font-semibold transition-opacity"
                 >
-                  support@tritontax.org
+                  partner@tritontax.org
                 </a>
               </div>
 
